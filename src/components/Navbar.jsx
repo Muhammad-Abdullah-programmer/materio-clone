@@ -75,7 +75,7 @@ const sunToggle = ()=>{
     return (
 
         <>
-<nav className={`flex justify-between w-[90%] px-8 py-2 mx-auto ${dark ? "bg-[#28243D] text-[#D4D1E9]" : "bg-red-500 text-black"}`}>
+<nav className={`flex justify-between w-[90%] px-8 py-2 mx-auto ${dark ? "bg-[#28243D] text-[#D4D1E9]" : " text-black"}`}>
     {/* left div  */}
   
     <div className="flex gap-6">

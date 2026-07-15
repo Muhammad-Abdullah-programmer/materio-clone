@@ -22,6 +22,10 @@ export { CiDark } from "react-icons/ci";
 export  { FaRegLightbulb } from "react-icons/fa";
 export { MdOutlineBookmarks } from "react-icons/md";
 export { MdOutlineCircle } from "react-icons/md";
+export { IoIosArrowDown } from "react-icons/io";
+export { AiFillPieChart } from "react-icons/ai";
+
+
 
 
 
