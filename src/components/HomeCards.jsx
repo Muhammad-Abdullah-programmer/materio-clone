@@ -1,72 +1,152 @@
-import React from 'react'
-import  '../assets/Style.css'
+import React from "react";
+import "../assets/Style.css";
+import ColumnChart from "./ColumnChart";
 
-import {AiFillPieChart} from '../assets/Icons'
-
+import {
+  AiFillPieChart,
+  FiUsers,
+  IoTrendingUpOutline,
+  BiBarChart,
+  RiBarChartFill,
+  LiaChartPieSolid,
+} from "../assets/Icons";
+import LineChart from "./LineChart";
+import DonutChart from "./DonutChart";
 
 const HomeCards = () => {
   return (
-    <div className='grid grid-cols-3 w-[80%] mx-auto gap-4'>
-      
+    <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-3  mt-16 pr-4 mx-auto   ">
       {/* Card 1  */}
-<div className="card-1 bg-white flex items-center gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+      <div className="card-1 col-span-1 bg-white flex items-center  relative py-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
+        <div className="text flex flex-col gap-4 pl-4  ">
+          <p className="">Ratings</p>
+          <p className="font-semibold text-2xl">
+            13k{" "}
+            <span className="text-xl text-[var(--green-colour)] font-normal">
+              +15.6%
+            </span>
+          </p>
+          <span className="text-[#8C57FF] bg-blue-400/40 rounded-3xl text-center w-[100%] px-2 py-1 text-sm font-semibold">
+            Year of 2026
+          </span>
+        </div>
 
-   <div className="text flex flex-col justify-evenly pl-4 h-[100%]">
-     <p className=''>Ratings</p>
-     <p className='font-semibold text-2xl'>13k <span className='text-xl text-[var(--green-colour)] font-normal'>+15.6%</span></p>
-     <span className='text-[#8C57FF] bg-blue-400/40 rounded-3xl text-center w-[100%] px-2 py-1 text-sm font-semibold'>Year of 2026</span>
+        <div className="image ">
+          <img
+            src="/1.png"
+            alt=""
+            className="absolute md:-top-10 -top-10 right-2 w-30 md:h-50 h-47  object-cover"
+          />
+        </div>
+      </div>
 
-   </div>
+      {/* Card 2  */}
+      <div className="card-1 col-span-1 bg-white flex items-center gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
+        <div className="text flex flex-col gap-4 justify-evenly pl-4 ">
+          <p className="">Sessions</p>
+          <p className="font-semibold text-2xl">
+            24.5k{" "}
+            <span className="text-xl text-[#FF4C51] font-normal">-20%</span>
+          </p>
+          <span className="text-gray-500 bg-gray-300 rounded-3xl text-center w-[100%] px-2 py-1 text-sm font-semibold">
+            Last Week
+          </span>
+        </div>
 
-   <div className="image ">
-    <img src="/1.png" alt="" className='absolute -top-8 right-2 w-30 object-cover'/>
-   </div>
+        <div className="image ">
+          <img
+            src="/2.png"
+            alt=""
+            className="absolute md:-top-10 -top-8 right-2 w-30 md:h-50 h-45  "
+          />
+        </div>
+      </div>
 
-</div>
+      {/* Card 3  */}
+      <div className="card-1 col-span-1 bg-white flex flex-col gap-4 relative py-4 px-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
+        <div className="heading">
+          <p className="text-lg font-semibold">Transections</p>
+          <p className="text-sm">Total 48.5% Growth 😎 this month</p>
+        </div>
 
-{/* Card 2  */}
-<div className="card-1 bg-white flex items-center gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+        {/* Icons  */}
+        <div className="icons flex flex-col md:flex-row md:justify-evenly gap-4 overflow-hidden">
+          {/* First Icon  */}
 
-   <div className="text flex flex-col justify-evenly pl-4 h-[100%]">
-     <p className=''>Sessions</p>
-     <p className='font-semibold text-2xl'>24.5k <span className='text-xl text-[#FF4C51] font-normal'>-20%</span></p>
-     <span className='text-gray-500 bg-gray-300 rounded-3xl text-center w-[100%] px-2 py-1 text-sm font-semibold'>Last Week</span>
+          <div className="first-icon flex gap-2">
+            <span className="bg-[#8C57FF] px-3 flex items-center justify-center text-2xl text-white  rounded">
+              <AiFillPieChart />
+            </span>
+            <div className="text flex flex-col">
+              <span>Sales</span>
+              <span className="font-semibold">245K</span>
+            </div>
+          </div>
 
-   </div>
+          {/* Second Icon  */}
 
-   <div className="image ">
-    <img src="/2.png" alt="" className='absolute -top-8 right-2  h-48 object-cover'/>
-   </div>
+          <div className="first-icon flex gap-2">
+            <span className="bg-[#56CA00] px-3 flex items-center justify-center text-2xl text-white  rounded">
+              <FiUsers />
+            </span>
+            <div className="text flex flex-col">
+              <span>Users</span>
+              <span className="font-semibold">12.5K</span>
+            </div>
+          </div>
 
-</div>
+          {/* Third Icon  */}
+          <div className="first-icon flex gap-2">
+            <span className="bg-[#FFB400] px-3 flex items-center justify-center text-2xl text-white  rounded">
+              <FiUsers />
+            </span>
+            <div className="text flex flex-col">
+              <span>Product</span>
+              <span className="font-semibold">1.54K</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-{/* Card 3  */}
-<div className="card-1 bg-white flex flex-col gap-4 relative py-4 px-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+      {/* Card 4 */}
+      <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+        <div className="text flex flex-col pl-4 h-[100%]">
+          <p className="">Total Sales</p>
+          <p className="font-semibold text-2xl">$21,845</p>
+        </div>
 
- <div className="heading">
-    <p className='text-lg font-semibold'>Transections</p>
-    <p className='text-sm'>Total 48.5% Growth 😎 this month</p>
- </div>
+        <div className="image flex flex-col  w-[100%]  ">
+<LineChart/>
+          <div className="Month flex justify-evenly">
+            <span>Jan</span>
+            <span>Feb</span>
+            <span>Mar</span>
+            <span>Apr</span>
+            <span>May</span>
+            <span>Jun</span>
+          </div>
+        </div>
+      </div>
+     
 
- {/* Icons  */}
- <div className="icons flex">
-<div className='bg-[#8C57FF] text-white p-2 rounded'>
-    <AiFillPieChart/>
-   
-</div>
- <div className="text flex flex-col">
-        <span>Sales</span>
-        <span>245K</span>
+      {/* Card 5  */}
+   <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+        <div className="text flex flex-col pl-4 h-[100%]">
+          <p className="">Revenue Report</p>
+        </div>
+
+      <ColumnChart/>
+      </div>
+
+      {/* Card 6  */}
+      <div className="card-1 col-span-1 bg-white flex   gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+
+     <DonutChart/>
+
+
+      </div>
     </div>
+  );
+};
 
- </div>
-
- 
-
-</div>
-
-    </div>
-  )
-}
-
-export default HomeCards
+export default HomeCards;

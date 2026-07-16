@@ -1,5 +1,7 @@
 import { BiMoon } from 'react-icons/bi'
-import {CiSearch, CiCalendarDate, AiFillDollarCircle,FaRegLightbulb, CiUser,IoLanguage, IoNewspaperOutline, IoSettingsSharp, IoStatsChart,MdOutlineWbSunny,FaRegStar,FaRegBell, FaUser , FaRegMoon, FaRegEnvelopeOpen , FaRegUser, FaGraduationCap , FaCarAlt, FaUnlockAlt, FaRegCheckSquare ,SlScreenDesktop,SiSimpleanalytics,BiSolidDashboard,GoQuestion,IoIosLogOut, RiHomeSmileLine,PiShoppingCartSimple,RxCross2,FaCircleNotch,FiShoppingBag,CgUserList,CiDark} from '../assets/Icons.jsx'
+import {  AiOutlineForm,
+CiSearch,VscSettings, CiCalendarDate, AiFillDollarCircle,FaRegLightbulb, CiUser,IoLanguage, IoNewspaperOutline, IoSettingsSharp, IoStatsChart,MdOutlineWbSunny,FaRegStar,FaRegBell, FaUser , FaRegMoon, FaRegEnvelopeOpen , FaRegUser, FaGraduationCap , FaCarAlt, FaUnlockAlt, FaRegCheckSquare ,SlScreenDesktop,SiSimpleanalytics,BiSolidDashboard,GoQuestion,IoIosLogOut, RiHomeSmileLine,PiShoppingCartSimple,RxCross2,FaCircleNotch,FiShoppingBag,CgUserList,CiDark} from '../assets/Icons.jsx'
+
 
 
 
@@ -75,6 +77,112 @@ const sunToggle = ()=>{
     return (
 
         <>
+
+          {/* Search Result Div  */}
+        <div
+          className={` ${searchbar ? "block" : "hidden"} search-result bg-white shadow-2xl px-4 z-50  w-[0%] flex flex-col gap-8  mx-auto absolute top-20 left-[20%]`}
+        >
+          {/* Search Bar  */}
+          <div className="search-bar flex justify-between items-center px-2 py-2 border text-2xl">
+            <CiSearch />
+
+            <div className="text flex items-center gap-2 ">
+              <span>[esc]</span>
+              <RxCross2 />
+            </div>
+          </div>
+
+          {/* Second Div  */}
+          <div className="div flex w-[80%] mx-auto justify-between">
+            {/* Popular  */}
+            <div className="popular flex flex-col gap-2">
+              <p className="uppercase">Popular Search</p>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <SiSimpleanalytics /> Analytics
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <FaCircleNotch /> CRM
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <FiShoppingBag /> eCommerece
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <CgUserList /> User list
+              </a>
+            </div>
+
+            {/* Apps  */}
+            <div className="apps flex flex-col gap-2">
+              <p className="uppercase">Apps</p>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <CiCalendarDate /> Calendar
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <CiDark /> Invoice list
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <CgUserList /> User list
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <FaUnlockAlt /> Roles & Permissions
+              </a>
+            </div>
+          </div>
+
+          {/* Third Div  */}
+          <div className="div flex w-[80%] mx-auto justify-between mb-4">
+            {/* Popular  */}
+            <div className="popular flex flex-col gap-2">
+              <p className="uppercase">Pages</p>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <FaRegUser /> User Profile
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <IoSettingsSharp /> Account Setting
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <AiFillDollarCircle /> Pricing
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <GoQuestion /> FAQs
+              </a>
+            </div>
+
+            {/* Apps  */}
+            <div className="apps flex flex-col gap-2 mr-9">
+              <p className="uppercase">Forms & Charts</p>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <AiOutlineForm />
+                Form Layout
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <FaRegCheckSquare /> Form Validation
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <VscSettings /> Form Wizard
+              </a>
+              <a href="" className="flex items-center gap-4">
+                {" "}
+                <IoStatsChart /> Apex Charts
+              </a>
+            </div>
+          </div>
+        </div>
 <nav className={`flex justify-between w-[90%] px-8 py-2 mx-auto ${dark ? "bg-[#28243D] text-[#D4D1E9]" : " text-black"}`}>
     {/* left div  */}
   

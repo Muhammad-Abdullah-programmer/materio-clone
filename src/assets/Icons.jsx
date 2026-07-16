@@ -24,6 +24,16 @@ export { MdOutlineBookmarks } from "react-icons/md";
 export { MdOutlineCircle } from "react-icons/md";
 export { IoIosArrowDown } from "react-icons/io";
 export { AiFillPieChart } from "react-icons/ai";
+export { FiUsers } from "react-icons/fi";
+export { IoTrendingUpOutline } from "react-icons/io5";
+export { BiBarChart } from "react-icons/bi";
+export { RiBarChartFill } from "react-icons/ri";
+export { LiaChartPieSolid } from "react-icons/lia";
+
+
+
+
+
 
 
 
