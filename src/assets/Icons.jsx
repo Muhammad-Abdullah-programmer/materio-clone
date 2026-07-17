@@ -33,6 +33,10 @@ export { IoWalletOutline } from "react-icons/io5";
 export { FaCircle } from "react-icons/fa";
 export { GrDocumentPdf } from "react-icons/gr";
 export { FcBusinessman } from "react-icons/fc";
+export { AiOutlineDollar } from "react-icons/ai";
+export { RiFileWord2Fill } from "react-icons/ri";
+
+
 
 
 

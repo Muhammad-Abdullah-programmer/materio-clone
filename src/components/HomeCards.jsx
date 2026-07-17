@@ -12,15 +12,20 @@ import {
   IoWalletOutline,
   FaCircle,
   GrDocumentPdf,
-  FcBusinessman
+  FcBusinessman,
+  AiOutlineDollar,
+  RiFileWord2Fill
 } from "../assets/Icons";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
+import GrowthLine from "./GrowthLine";
 
 const HomeCards = () => {
   return (
-    <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-3  mt-16  mx-auto   ">
-      {/* Card 1  */}
+    <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-2  mt-16  mx-auto   ">
+  
+  <div className="grid grid-cols-2 gap-4">
+        {/* Card 1  */}
       <div className="card-1 col-span-1 bg-white flex items-center  relative py-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
         <div className="text flex flex-col gap-4 pl-4  ">
           <p className="">Ratings</p>
@@ -65,6 +70,7 @@ const HomeCards = () => {
           />
         </div>
       </div>
+  </div>
 
       {/* Card 3  */}
       <div className="card-1 col-span-1 bg-white flex flex-col gap-4 relative py-4 px-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
@@ -112,49 +118,58 @@ const HomeCards = () => {
         </div>
       </div>
 
-      {/* Card 4 */}
-      <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
-        <div className="text flex flex-col pl-4 h-[100%]">
-          <p className="">Total Sales</p>
-          <p className="font-semibold text-2xl">$21,845</p>
-        </div>
 
-        <div className="image flex flex-col  w-[100%]  ">
-          <LineChart />
-          <div className="Month flex justify-evenly">
-            <span>Jan</span>
-            <span>Feb</span>
-            <span>Mar</span>
-            <span>Apr</span>
-            <span>May</span>
-            <span>Jun</span>
+
+
+      <div className="grid grid-cols-2 gap-4">
+        {/* Card 4 */}
+        <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4  rounded-2xl shadow-2xl ">
+          <div className="text flex flex-col pl-4 ">
+            <p className="">Total Sales</p>
+            <p className="font-semibold text-2xl">$21,845</p>
+          </div>
+
+          <div className="image flex flex-col  w-[100%]  ">
+            <LineChart />
+            <div className="Month flex justify-evenly">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Card 5  */}
-      <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
-        <div className="text flex flex-col pl-4 h-[100%]">
-          <p className="">Revenue Report</p>
+        {/* Card 5  */}
+        <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 
+ rounded-2xl shadow-2xl ">
+          <div className="text flex flex-col pl-4 h-[100%]">
+            <p className="">Revenue Report</p>
+          </div>
+
+          <ColumnChart />
         </div>
-
-        <ColumnChart />
       </div>
 
       {/* Card 6  */}
-      <div className="card-1 col-span-1 overflow-hidden overflow-y-hidden bg-white flex flex-col items-center justify-center    relative  min-h-[29vh] rounded-2xl shadow-2xl ">
-
-        <p className="text-left my-4 font-semibold">Sales Overview </p>
+      <div className="card-1  grid-cols-3  bg-white flex  items-center justify-center    relative rounded-2xl shadow-2xl ">
+<div className="grid-cols-1 ">
+  
         {/* Chart  */}
-        <div className="chart w-[100%]">
+        <div className="chart w-[100%]  my-4">
+                  <p className=" my-4 font-semibold text-center ">Sales Overview </p>
+
           <DonutChart />
         </div>
+</div>
 
-        {/* Text  */}
-        <div className="text-heading flex flex-col px-4 py-4 justify-between  gap-2 w-[100%] border-t-1">
-
+      <div className="grid-cols-1 ">
+  {/* Text  */}
+        <div className="text-heading flex flex-col  py-4 justify-between  gap-2 w-[100%] ">
           {/* icons  */}
-          <div className="icons flex gap-4 ml-8 my-5">
+          <div className="icons flex gap-4  my-5">
             <span className="bg-[#EDE4FF] p-1 rounded-xl text-3xl">
               <IoWalletOutline />
             </span>
@@ -166,9 +181,7 @@ const HomeCards = () => {
           </div>
 
           {/* Child Parent div  */}
-          <div className="text grid grid-cols-2 place-items-center gap-4 w-[100%]  ">
-
-           
+          <div className="text grid grid-cols-2 place-items-center pt-4 gap-4 w-[100%] border-t-1 ">
             {/* Child 1 */}
 
             <div className="div ">
@@ -186,10 +199,8 @@ const HomeCards = () => {
               <span>$12,150</span>
             </div>
 
-
-
             {/* Third Child  */}
-              <div className="div">
+            <div className="div">
               <p className="flex items-center gap-2">
                 <FaCircle className="text-xs text-[#8C57FF]" /> Apparel
               </p>
@@ -197,74 +208,154 @@ const HomeCards = () => {
             </div>
 
             {/* Forth Child  */}
-              <div className="div">
+            <div className="div">
               <p className="flex items-center gap-2">
                 <FaCircle className="text-xs text-[#8C57FF]" /> Apparel
               </p>
               <span>$12,150</span>
             </div>
-            
           </div>
         </div>
       </div>
+      </div>
 
-      {/* Card 7  */}
-      <div className="card-7 flex flex-col bg-white items-center ">
+   {/* Grid for Row 3  */}
+   <div className=" grid grid-cols-2 ">
 
+    {/* Activity  */}
+    <div className="col-span-2">
+         {/* Card 7  */}
+      <div className="card-7 flex flex-col py-4 min-h-[100%] bg-white items-center ">
         <div className="heading">
           <p className="font-bold tracking-wide my-6 ">Activity Timeline</p>
 
-{/* Text Div  */}
+          {/* Text Div  */}
           <div className="text-div flex flex-col pb-2 gap-4 border-l-1 pl-6">
+            {/* First Child  */}
+            <div className=" relative first flex flex-col gap-2">
+              <p className="font-semibold">12 Invoices have been paid</p>
+              <span>Invoices have been paid to the company</span>
+              <span className="flex items-center  gap-3   ">
+                <GrDocumentPdf className="text-[#CB0606] text-2xl" />{" "}
+                invoices.pdf
+              </span>
 
-{/* First Child  */}
-<div className=" relative first flex flex-col gap-2">
-  <p className="font-semibold">12 Invoices have been paid</p>
-  <span>Invoices have been paid to the company</span>
-  <span className="flex items-center  gap-3   "><GrDocumentPdf className="text-[#CB0606] text-2xl"/> invoices.pdf</span>
+              {/* Circle  */}
+              <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#8C57FF] rounded-full "></div>
+            </div>
 
-{/* Circle  */}
-  <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#8C57FF] rounded-full ">
+            {/* Second Child  */}
+            <div className=" relative first flex flex-col gap-2">
+              <p className="font-semibold">Client Meeting</p>
+              <span>Project meeting with john @10:15am</span>
 
-  </div>
-</div>
+              <div className="flex items-center  gap-2">
+                <span className="bg-[#E0CFFE] rounded-full">
+                  <FcBusinessman className="text-4xl" />
+                </span>
 
-{/* Second Child  */}
-<div className=" relative first flex flex-col gap-2">
-  <p className="font-semibold">Client Meeting</p>
-  <span>Project meeting with john @10:15am</span>
+                <div className="flex flex-col gap-1">
+                  <span className="text-sm font-bold">
+                    Lester McCarthy (Client)
+                  </span>
+                  <span className="text-xs">CEO of ThemeSelection</span>
+                </div>
+              </div>
 
-  <div className="flex items-center  gap-2">
-    <span className="bg-[#E0CFFE] rounded-full"><FcBusinessman className="text-4xl"/></span>
+              {/* Circle  */}
+              <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#56CA00] rounded-full "></div>
+            </div>
 
-    <div className="flex flex-col">
-<span className="text-sm font-bold">Lester McCarthy (Client)</span>
-<span className="text-xs">CEO of ThemeSelection</span>
-    </div>
-  </div>
+            {/* Third Child  */}
+            <div className="div relative ">
+              <div className="first flex flex-col gap-2">
+                <p className="font-semibold">Create a new project for client</p>
+                <span>6 team members in a project</span>
+              </div>
 
-  {/* Circle  */}
-  <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#56CA00] rounded-full ">
-
-  </div>
-</div>
-
-{/* Third Child  */}
-<div className="div relative ">
-  <div className="first flex flex-col gap-2">
-  <p className="font-semibold">Create a new project for client</p>
-  <span>6 team members in a project</span>
-</div>
-
-  {/* Circle  */}
-  <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#16B1FF] rounded-full ">
-
-  </div>
-</div>
+              {/* Circle  */}
+              <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#16B1FF] rounded-full "></div>
+            </div>
           </div>
         </div>
-
       </div>
+
+    </div>
+</div>
+
+<div className="grid grid-cols-2 ">
+
+<div className="col-span-1">
+{/* Weekly Sales  */}
+<div className="col-span-1">
+ {/* Card 8  */}
+      <div className="card-1  bg-white flex flex-col  gap-4 relative py-4  rounded-2xl shadow-2xl ">
+        <div className="text flex flex-col pl-4 h-[100%]">
+          <p className="font-semibold">Weekly Sales</p>
+          <span className="text-sm">Total 85.4k Sales</span>
+        </div>
+
+        <ColumnChart />
+
+        {/* icons  */}
+        <div className="icons flex justify-around w-[100%]  ">
+          {/* Child 1  */}
+          <div className="child-1 flex gap-2">
+            <span className="bg-[#8C57FF] px-3 flex items-center justify-center text-2xl text-white  rounded">
+              <AiFillPieChart />
+            </span>
+
+            <div className="text flex flex-col">
+              <span className="font-semibold">34.6k</span>
+              <span>Sales</span>
+            </div>
+          </div>
+
+          {/* Child 2 */}
+          <div className="child-1 flex gap-2">
+            <span className="bg-[#E4F6D6] px-3 flex items-center justify-center text-2xl text-white  rounded">
+              <AiOutlineDollar className="text-[#56CA00]" />
+            </span>
+
+            <div className="text flex flex-col">
+              <span className="font-semibold">$482k</span>
+              <span>Total</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+</div>
+
+{/* demo..............  */}
+<div className="col-span-1 flex flex-col items-center gap-4 ">
+
+{/* Total Growth  */}
+<div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[70%]">
+<p className="text-2xl font-bold">42.5k</p>
+
+ <GrowthLine />
+
+ <p className="text-center">Total Growth</p>
+</div>
+
+{/* Total Growth  */}
+<div className=" w-[70%] flex flex-col gap-4 bg-white shadow-2xl px-10 py-4 ">
+<div className=" bg-[#8C57FF] w-10 text-white h-10 p-1 flex justify-center items-center rounded-full">
+  <RiFileWord2Fill className="text-2xl"/>
+</div>
+<p>New Project</p>
+<div className="flex">
+  <p className="font-semibold text-2xl">862</p> <span className="text-red-500">-18%</span>
+</div>
+<span>Yearly Project</span>
+</div>
+
+</div>
+</div>
+
+     
     </div>
   );
 };

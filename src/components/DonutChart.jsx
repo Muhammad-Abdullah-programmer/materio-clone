@@ -23,18 +23,22 @@ const DonutChart = () => {
       fill: {
         type: 'gradient',
       },
+      // legend: {
+      //   formatter: function (val, opts) {
+      //     return val + ' - ' + opts.w.globals.series[opts.seriesIndex]
+      //   },
+      // },
+
       legend: {
-        formatter: function (val, opts) {
-          return val + ' - ' + opts.w.globals.series[opts.seriesIndex]
-        },
-      },
+      show: false, // 👈 is se right side wali series hide ho jayegi
+    },
     
       responsive: [
         {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200,
+              width: 350,
             },
             legend: {
               position: 'bottom',
