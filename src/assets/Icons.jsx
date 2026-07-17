@@ -31,6 +31,10 @@ export { RiBarChartFill } from "react-icons/ri";
 export { LiaChartPieSolid } from "react-icons/lia";
 export { IoWalletOutline } from "react-icons/io5";
 export { FaCircle } from "react-icons/fa";
+export { GrDocumentPdf } from "react-icons/gr";
+export { FcBusinessman } from "react-icons/fc";
+
+
 
 
 

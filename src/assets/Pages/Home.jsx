@@ -82,7 +82,6 @@ const Home = () => {
       
 
         <HomeCards />
-        <ActivityTimeline/>
       </div>
     </div>
   )

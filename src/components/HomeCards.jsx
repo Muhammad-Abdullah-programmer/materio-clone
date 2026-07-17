@@ -11,6 +11,8 @@ import {
   LiaChartPieSolid,
   IoWalletOutline,
   FaCircle,
+  GrDocumentPdf,
+  FcBusinessman
 } from "../assets/Icons";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
@@ -204,6 +206,64 @@ const HomeCards = () => {
             
           </div>
         </div>
+      </div>
+
+      {/* Card 7  */}
+      <div className="card-7 flex flex-col bg-white items-center ">
+
+        <div className="heading">
+          <p className="font-bold tracking-wide my-6 ">Activity Timeline</p>
+
+{/* Text Div  */}
+          <div className="text-div flex flex-col pb-2 gap-4 border-l-1 pl-6">
+
+{/* First Child  */}
+<div className=" relative first flex flex-col gap-2">
+  <p className="font-semibold">12 Invoices have been paid</p>
+  <span>Invoices have been paid to the company</span>
+  <span className="flex items-center  gap-3   "><GrDocumentPdf className="text-[#CB0606] text-2xl"/> invoices.pdf</span>
+
+{/* Circle  */}
+  <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#8C57FF] rounded-full ">
+
+  </div>
+</div>
+
+{/* Second Child  */}
+<div className=" relative first flex flex-col gap-2">
+  <p className="font-semibold">Client Meeting</p>
+  <span>Project meeting with john @10:15am</span>
+
+  <div className="flex items-center  gap-2">
+    <span className="bg-[#E0CFFE] rounded-full"><FcBusinessman className="text-4xl"/></span>
+
+    <div className="flex flex-col">
+<span className="text-sm font-bold">Lester McCarthy (Client)</span>
+<span className="text-xs">CEO of ThemeSelection</span>
+    </div>
+  </div>
+
+  {/* Circle  */}
+  <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#56CA00] rounded-full ">
+
+  </div>
+</div>
+
+{/* Third Child  */}
+<div className="div relative ">
+  <div className="first flex flex-col gap-2">
+  <p className="font-semibold">Create a new project for client</p>
+  <span>6 team members in a project</span>
+</div>
+
+  {/* Circle  */}
+  <div className="circle absolute w-4 h-4 top-1 -left-8 bg-[#16B1FF] rounded-full ">
+
+  </div>
+</div>
+          </div>
+        </div>
+
       </div>
     </div>
   );
