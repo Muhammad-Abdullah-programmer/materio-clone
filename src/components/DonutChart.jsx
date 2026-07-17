@@ -28,9 +28,7 @@ const DonutChart = () => {
           return val + ' - ' + opts.w.globals.series[opts.seriesIndex]
         },
       },
-      title: {
-        text: 'Gradient Donut with custom Start-angle',
-      },
+    
       responsive: [
         {
           breakpoint: 480,

@@ -29,6 +29,10 @@ export { IoTrendingUpOutline } from "react-icons/io5";
 export { BiBarChart } from "react-icons/bi";
 export { RiBarChartFill } from "react-icons/ri";
 export { LiaChartPieSolid } from "react-icons/lia";
+export { IoWalletOutline } from "react-icons/io5";
+export { FaCircle } from "react-icons/fa";
+
+
 
 
 

@@ -9,13 +9,15 @@ import {
   BiBarChart,
   RiBarChartFill,
   LiaChartPieSolid,
+  IoWalletOutline,
+  FaCircle,
 } from "../assets/Icons";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
 
 const HomeCards = () => {
   return (
-    <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-3  mt-16 pr-4 mx-auto   ">
+    <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-3  mt-16  mx-auto   ">
       {/* Card 1  */}
       <div className="card-1 col-span-1 bg-white flex items-center  relative py-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
         <div className="text flex flex-col gap-4 pl-4  ">
@@ -116,7 +118,7 @@ const HomeCards = () => {
         </div>
 
         <div className="image flex flex-col  w-[100%]  ">
-<LineChart/>
+          <LineChart />
           <div className="Month flex justify-evenly">
             <span>Jan</span>
             <span>Feb</span>
@@ -127,23 +129,81 @@ const HomeCards = () => {
           </div>
         </div>
       </div>
-     
 
       {/* Card 5  */}
-   <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+      <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
         <div className="text flex flex-col pl-4 h-[100%]">
           <p className="">Revenue Report</p>
         </div>
 
-      <ColumnChart/>
+        <ColumnChart />
       </div>
 
       {/* Card 6  */}
-      <div className="card-1 col-span-1 bg-white flex   gap-4 relative py-4 min-h-[29vh] rounded-2xl shadow-2xl ">
+      <div className="card-1 col-span-1 overflow-hidden overflow-y-hidden bg-white flex flex-col items-center justify-center    relative  min-h-[29vh] rounded-2xl shadow-2xl ">
 
-     <DonutChart/>
+        <p className="text-left my-4 font-semibold">Sales Overview </p>
+        {/* Chart  */}
+        <div className="chart w-[100%]">
+          <DonutChart />
+        </div>
+
+        {/* Text  */}
+        <div className="text-heading flex flex-col px-4 py-4 justify-between  gap-2 w-[100%] border-t-1">
+
+          {/* icons  */}
+          <div className="icons flex gap-4 ml-8 my-5">
+            <span className="bg-[#EDE4FF] p-1 rounded-xl text-3xl">
+              <IoWalletOutline />
+            </span>
+
+            <div className="flex flex-col">
+              <p className="text-sm">Number of Sales</p>
+              <span className="font-bold">$86,400</span>
+            </div>
+          </div>
+
+          {/* Child Parent div  */}
+          <div className="text grid grid-cols-2 place-items-center gap-4 w-[100%]  ">
+
+           
+            {/* Child 1 */}
+
+            <div className="div ">
+              <p className="flex items-center gap-2">
+                <FaCircle className="text-xs text-[#8C57FF]" /> Apparel
+              </p>
+              <span>$12,150</span>
+            </div>
+
+            {/* Second Child  */}
+            <div className="div">
+              <p className="flex items-center gap-2">
+                <FaCircle className="text-xs text-[#8C57FF]" /> Apparel
+              </p>
+              <span>$12,150</span>
+            </div>
 
 
+
+            {/* Third Child  */}
+              <div className="div">
+              <p className="flex items-center gap-2">
+                <FaCircle className="text-xs text-[#8C57FF]" /> Apparel
+              </p>
+              <span>$12,150</span>
+            </div>
+
+            {/* Forth Child  */}
+              <div className="div">
+              <p className="flex items-center gap-2">
+                <FaCircle className="text-xs text-[#8C57FF]" /> Apparel
+              </p>
+              <span>$12,150</span>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
   );
