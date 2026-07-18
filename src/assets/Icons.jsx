@@ -35,6 +35,20 @@ export { GrDocumentPdf } from "react-icons/gr";
 export { FcBusinessman } from "react-icons/fc";
 export { AiOutlineDollar } from "react-icons/ai";
 export { RiFileWord2Fill } from "react-icons/ri";
+export { PiBagSimpleFill } from "react-icons/pi";
+export { LuCreditCard } from "react-icons/lu";
+export { FaRegCreditCard } from "react-icons/fa";
+export { FaGithub } from "react-icons/fa";
+export { CiInstagram } from "react-icons/ci";
+export { FaFacebook } from "react-icons/fa";
+export { FaLinkedin } from "react-icons/fa";
+
+
+
+
+
+
+
 
 
 

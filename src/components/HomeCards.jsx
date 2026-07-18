@@ -14,14 +14,20 @@ import {
   GrDocumentPdf,
   FcBusinessman,
   AiOutlineDollar,
-  RiFileWord2Fill
+  RiFileWord2Fill,
+  PiBagSimpleFill,
+  LuCreditCard,
+  FaRegCreditCard
 } from "../assets/Icons";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
 import GrowthLine from "./GrowthLine";
+import Footer from "./Footer";
 
 const HomeCards = () => {
   return (
+
+    <>
     <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-2  mt-16  mx-auto   ">
   
   <div className="grid grid-cols-2 gap-4">
@@ -356,7 +362,101 @@ const HomeCards = () => {
 </div>
 
      
+     {/* Row 4 Started  */}
+     <div className="flex">
+
+      {/* Upgrade Plan  */}
+      <div className=" flex flex-col gap-4 max-w-[75%] bg-white shadow-2xl px-4 py-4 ">
+
+<p className="font-semibold">Upgrade Plan</p>
+<span className="tracking-wide text-sm">Please make the payment to start enjoying all the features of our premium plan as soon as possible.</span>
+
+
+{/* Platinum  */}
+<div className="flex justify-between items-center bg-[#EDE4FF] py-4 px-4 ">
+
+  <div className="image border-blue-500 border-1 rounded flex justify-center items-center py-2 px-3">
+    <PiBagSimpleFill className="text-2xl text-[#9155FD]"/>
+  </div>
+
+  {/* Text  */}
+  <div className="flex flex-col">
+    <span className="font-semibold">Platinum</span>
+    <span className="text-[#8C57FF]">Upgrade plan</span>
+
+    
+  </div>
+  <p><span className="font-bold">$5,250</span>/Year</p>
+</div>
+
+{/* Payment Info Div  */}
+<div className=" flex flex-col gap-4">
+
+<p className="font-semibold">Payment Details</p>
+
+
+{/* Credit Card  */}
+<div className=" flex justify-between items-center px-4">
+  <LuCreditCard className=" text-[#FF9900] text-3xl   "/>
+
+  {/* Card info  */}
+  <div className="flex flex-col">
+    <p className="font-semibold">Credit Card</p>
+    <span className="font-normal">2566 xxxx xxxx 8908</span>
+
+  </div>
+
+  {/* CVV  */}
+  <div className="border-1 p-2">
+    <span>CVV</span>
+  </div>
+</div>
+<div className=" flex justify-between items-center px-4">
+  <FaRegCreditCard className=" text-[#CC0000] text-3xl   "/>
+
+  {/* Card info  */}
+  <div className="flex flex-col">
+    <p className="font-semibold">Credit Card</p>
+    <span className="font-normal">8990 xxxx xxxx 6852</span>
+
+  </div>
+
+  {/* CVV  */}
+  <div className="border-1 p-2">
+    <span>CVV</span>
+  </div>
+</div>
+
+</div>
+
+{/* Input Types  */}
+<div className="flex flex-col">
+
+  <p className="font-semibold py-4 text-[#8C57FF]">Add Payment Method</p>
+  <input type="text" placeholder="Email Address" className="border-1 border-gray-400 p-2 rounded  " />
+  <button className="bg-[#8C57FF] text-white font-bold p-2 my-2 rounded">Contact Us</button>
+
+</div>
+      </div>
+
+{/* Grid 2  */}
+      <div className=" bg-blue-600 h-4">
+        111111111
+      </div>
+
+      {/* Grid 3 */}
+      <div className=" bg-cyan-400 h-4">
+        2222222
+      </div>
+      </div>
+
+      
+
     </div>
+
+ <Footer/>
+
+   </>
   );
 };
 
