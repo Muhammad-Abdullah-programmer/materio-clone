@@ -42,6 +42,17 @@ export { FaGithub } from "react-icons/fa";
 export { CiInstagram } from "react-icons/ci";
 export { FaFacebook } from "react-icons/fa";
 export { FaLinkedin } from "react-icons/fa";
+export { RiGraduationCapLine } from "react-icons/ri";
+export { TbMessages } from "react-icons/tb";
+export { MdDateRange } from "react-icons/md";
+export { LuSquareDashedMousePointer } from "react-icons/lu";
+export { LiaBookSolid } from "react-icons/lia";
+
+
+
+
+
+
 
 
 
