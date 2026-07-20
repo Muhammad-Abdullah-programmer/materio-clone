@@ -47,6 +47,21 @@ export { TbMessages } from "react-icons/tb";
 export { MdDateRange } from "react-icons/md";
 export { LuSquareDashedMousePointer } from "react-icons/lu";
 export { LiaBookSolid } from "react-icons/lia";
+export { GoCircle } from "react-icons/go";
+export { PiGreaterThanBold } from "react-icons/pi";
+export { FaUserTie } from "react-icons/fa";
+export { FaRegCalendar } from "react-icons/fa";
+export { RiCheckDoubleFill } from "react-icons/ri";
+export { RxDotsHorizontal } from "react-icons/rx";
+export { HiOutlineClock } from "react-icons/hi2";
+export { SlLocationPin } from "react-icons/sl";
+
+
+
+
+
+
+
 
 
 

@@ -44,6 +44,8 @@ import {
   MdOutlineBookmarks,
   MdOutlineCircle,
   IoIosArrowDown,
+  GoCircle,
+  PiGreaterThanBold
 } from "../assets/Icons";
 
 
@@ -51,6 +53,12 @@ import {
 const Sidebar = ({ dark, setDark }) => {
 
   const [showDashb, setshowDashb] = useState(false);
+  const [isActive, setIsActive] = useState(false)
+
+  const btnClicked = ()=>{
+
+    setIsActive(!isActive)
+  }
 
   const shoHideDash = () => {
     setshowDashb(prev => !prev);
@@ -231,7 +239,7 @@ const Sidebar = ({ dark, setDark }) => {
         <div className="after-hover hidden w-[0%] group-hover:w-[100%] group-hover:block   absolute top-15 left- transition-all ease-in-out duration-300">
           {/* Icon 1  */}
           <div
-            className={`${dark ? "hover:bg-[#37334C] text-[#D5D1EA]" : "hover:bg-[#ECECF2]"} icon  flex items-center pl-1 hover:rounded-r-full w-[100%] `}
+            // className={`${dark ? "hover:bg-[#37334C] text-[#D5D1EA]" : "hover:bg-[#ECECF2]"} icon  flex items-center pl-1 hover:rounded-r-full w-[100%] `}
           >
             <ul>
 
@@ -248,8 +256,25 @@ const Sidebar = ({ dark, setDark }) => {
 
                 </div>
 
-                <ul className={` ${ showDashb ? "block" : "hidden"}`} >
-                  <li>gggggggg</li>
+                <ul className={` ${ showDashb ? "block" : "hidden"} mt-3 flex flex-col gap-2`} >
+                  <li  onClick={btnClicked} className={` ${isActive ? " bg-gradient-to-r from-[#C1A4FF] to-[#905DFF]" : "text-black "}  flex items-center gap-2 w-[100%] pl-3 rounded-r-2xl p-1`}><GoCircle className="text-xs"/> CRM</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Analytics</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> eCommerece</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Academy</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><MdOutlineBookmarks className="text-xs"/> Front Page <PiGreaterThanBold/>
+                  
+                  
+        {/* <div className="felx flex-col">
+                    <ul className="flex gap-2">
+
+                                      <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
+                                      <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
+                  </ul>
+        </div> */}
+                   </li>
+      
+                  
                 </ul>
 
               </li>
