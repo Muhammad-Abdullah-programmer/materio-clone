@@ -34,8 +34,8 @@ import Footer from "./Footer";
 const HomeCards = () => {
   return (
     <>
-      <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-2  mt-16  mx-auto   ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 px-6 md:px-0">
+      <div className="grid  grid-cols-1 gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-2  mt-16  mx-auto   ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 px-4 md:px-0">
           {/* Card 1  */}
           <div className="card-1 col-span-1 bg-white flex items-center  relative py-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
             <div className="text flex flex-col gap-4 pl-4  ">
@@ -129,7 +129,7 @@ const HomeCards = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-0 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-0 gap-4">
           {/* Card 4 */}
           <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4  rounded-2xl shadow-2xl ">
             <div className="text flex flex-col pl-4 ">
@@ -237,7 +237,7 @@ const HomeCards = () => {
           {/* Activity  */}
 
           {/* Card 7  */}
-          <div className="  flex flex-col w-[100%] py-4 flex-1 bg-white items-center shadow-2xl ">
+          <div className="  bg-white flex flex-col flex-1   relative py-4  rounded-2xl shadow-2xl w-[100%] pl-4 h-[80vh] ">
             <div className="heading ">
               <p className="font-bold tracking-wide my-6 ">Activity Timeline</p>
 
@@ -332,18 +332,18 @@ const HomeCards = () => {
           </div>
 
              {/* demo..............  */}
-          <div className=" flex md:flex-col justify-around items-center overflow-hidden  gap-4 ">
+          <div className=" flex md:flex-col justify-around items-center overflow-hidden  gap-4 shadow-2xl">
             {/* Total Growth  */}
-            <div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[100%] overflow-hidden">
+            <div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[100%] h-[42vh] rounded-2xl overflow-hidden">
               <p className="text-2xl font-bold">42.5k</p>
 
               <GrowthLine />
 
-              <p className="text-center">Total Growth</p>
+              <p className="text-center mb-4">Total Growth</p>
             </div>
 
             {/* New project  */}
-            <div className=" md:w-[100%] flex flex-col gap-4 bg-white shadow-2xl px-10 py-4 ">
+            <div className=" md:w-[100%] flex flex-col gap-4 bg-white shadow-2xl px-10 py-4 rounded-2xl ">
               <div className=" bg-[#8C57FF] w-10 text-white h-10 p-1 flex justify-center items-center rounded-full">
                 <RiFileWord2Fill className="text-2xl" />
               </div>

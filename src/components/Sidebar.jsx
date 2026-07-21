@@ -64,6 +64,12 @@ const Sidebar = ({ dark, setDark }) => {
     setshowDashb(prev => !prev);
   };
 
+const [showfrontP, setshowfrontP] = useState(false)
+
+  const shoHidefPage = ()=>{
+
+    setshowfrontP(!shoHidefPage)
+  }
   return (
 
    <div>
@@ -71,10 +77,10 @@ const Sidebar = ({ dark, setDark }) => {
     
     {/* Side Bar  */}
     <div
-      className={`side-bar absolute top-0 z-50 hidden md:block   overflow-hidden`}
+      className={`side-bar absolute top-0 z-50 hidden md:block`}
     >
       <aside
-        className={`${dark ? "bg-[#28243D] text-[#D4D1E9]" : "bg-[#F4F5FA] text-black"}  w-[28%]  flex flex-col gap-4 items-start   shadow-2xl z-50 pr-4 hover:w-[100%] group  transition-all ease-in-out duration-300 `}
+        className={`${dark ? "bg-[#28243D] text-[#D4D1E9]" : "bg-[#F4F5FA] text-black"}  w-[28%]  flex flex-col gap-4 items-start   shadow-2xl z-50 pr-4 hover:w-[100%] group  transition-all ease-in-out duration-300 h-[100vh] `}
       >
         {/* Menue  */}
         <div className="menue flex flex-col gap-4 ">
@@ -262,17 +268,46 @@ const Sidebar = ({ dark, setDark }) => {
                   <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> eCommerece</li>
                   <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Academy</li>
                   <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
+                  <li className="">
+                <div className="flex items-center gap-1">
+                <LiaBookSolid className="text-3xl pl-2 text-black" />{" "}
+                Front Page 
+                
+                <span>
+                  <PiGreaterThanBold  onClick={shoHidefPage}/>
+                </span>
+
+                </div>
+
+                <ul className={` ${ shoHidefPage ? "block" : "hidden"} mt-3 flex flex-col gap-2`} >
+                  <li   className={`  flex items-center gap-2 w-[100%] pl-3 rounded-r-2xl p-1`}><GoCircle className="text-xs"/> CRM</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Analytics</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> eCommerece</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Academy</li>
+                  <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
                   <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><MdOutlineBookmarks className="text-xs"/> Front Page <PiGreaterThanBold/>
                   
-                  
-        {/* <div className="felx flex-col">
-                    <ul className="flex gap-2">
+                       <div className="">
+                    <ul className="flex flex-col gap-2">
 
                                       <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
                                       <li   className= "  flex items-center gap-2 w-[100%] pl-3  p-1 rounded-r-2xl hover:bg-white"><GoCircle className="text-xs"/> Logistics</li>
                   </ul>
-        </div> */}
+        </div>
                    </li>
+                  
+                  
+   
+                  
+      
+                  
+                </ul>
+
+              </li>
+                  
+                  
+   
+                  
       
                   
                 </ul>
