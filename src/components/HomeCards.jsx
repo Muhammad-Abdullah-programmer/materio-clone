@@ -364,9 +364,9 @@ const HomeCards = () => {
      
 
       {/* Row 4 Started  */}
-      <div className="grid md:grid-cols-3 px-4 md:px-0 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  mt-8  mx-auto ">
+      <div className="grid md:grid-cols-3 px-4 md:px-0 gap-4 w-[100%] md:w-[95%] md:ml-15  mt-8  mx-auto ">
         {/* Upgrade Plan  */}
-        <div className="   flex flex-col gap-4  bg-white shadow-2xl px-4 py-4 ">
+        <div className="   flex flex-col gap-4  bg-white shadow-2xl px-4 py-4 rounded-2xl ">
           <p className="font-semibold">Upgrade Plan</p>
           <span className="tracking-wide text-sm">
             Please make the payment to start enjoying all the features of our
@@ -441,7 +441,7 @@ const HomeCards = () => {
         </div>
 
         {/* Meeting Schedule  */}
-        <div className=" bg-white shadow-2xl flex flex-col justify-evenly ">
+        <div className=" bg-white shadow-2xl flex flex-col justify-evenly rounded-2xl ">
 
           <h2 className="ml-6 font-semibold my-4 ">Meeting Schedule</h2>
 
@@ -543,11 +543,11 @@ const HomeCards = () => {
         </div>
 
         {/* Grid 3 */}
-        <div className=" bg-white shadow-2xl flex flex-col items-center">
+        <div className=" bg-white shadow-2xl flex flex-col items-center rounded-2xl">
 
 {/* Image  */}
 <div className="">
-  <img src="./3.png" alt="" />
+  <img src="./3.png" alt="" className="rounded-2xl"/>
 </div>
 
 <div className=" h-[100%] flex flex-col gap-6 md:gap-0 mt-4 py-4 md:mt-0 md:py-0  justify-evenly">
