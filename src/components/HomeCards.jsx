@@ -84,7 +84,7 @@ const HomeCards = () => {
         </div>
 
         {/* Card 3  */}
-        <div className="card-1 w-[95%] mx-auto   col-span-1 bg-white flex flex-col gap-4 relative py-4 px-4  min-h-[29vh] rounded-2xl shadow-2xl  ">
+        <div className="card-1 w-[93%] mx-auto   col-span-1 bg-white flex flex-col gap-4 relative py-4 px-4  min-h-[29vh] rounded-2xl shadow-2xl  ">
           <div className="heading">
             <p className="text-lg font-semibold">Transections</p>
             <p className="text-sm">Total 48.5% Growth 😎 this month</p>
@@ -164,7 +164,7 @@ const HomeCards = () => {
         </div>
 
         {/* Card 6  */}
-        <div className="card-1 grid grid-cols-1 md:grid-cols-3 px-4 md:px-0 w-[95%] mx-auto   bg-white     relative rounded-2xl shadow-2xl ">
+        <div className="card-1 grid grid-cols-1 md:grid-cols-3 px-6 md:px-0 w-[93%] mx-auto   bg-white     relative rounded-2xl shadow-2xl ">
           <div className=" md:col-span-2    overflow-hidden ">
             {/* Chart  */}
             <div className="chart w-[100%]  my-4">
@@ -332,9 +332,9 @@ const HomeCards = () => {
           </div>
 
              {/* demo..............  */}
-          <div className=" flex md:flex-col justify-around items-center overflow-hidden  gap-4 shadow-2xl">
+          <div className=" flex md:flex-col justify-around items-center overflow-hidden w-[98%]  gap-4 shadow-2xl">
             {/* Total Growth  */}
-            <div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[100%] h-[42vh] rounded-2xl overflow-hidden">
+            <div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[100%] md:h-[42vh] rounded-2xl overflow-hidden">
               <p className="text-2xl font-bold">42.5k</p>
 
               <GrowthLine />
