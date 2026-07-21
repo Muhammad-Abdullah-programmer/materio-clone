@@ -35,7 +35,7 @@ const HomeCards = () => {
   return (
     <>
       <div className="grid  grid-cols-1 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  md:grid-cols-2  mt-16  mx-auto   ">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 px-6 md:px-0">
           {/* Card 1  */}
           <div className="card-1 col-span-1 bg-white flex items-center  relative py-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
             <div className="text flex flex-col gap-4 pl-4  ">
@@ -55,7 +55,7 @@ const HomeCards = () => {
               <img
                 src="/1.png"
                 alt=""
-                className="absolute md:-top-10 -top-10 right-2 w-30 md:h-50 h-47  object-cover"
+                className="absolute md:-top-10 -top-2 right-2 w-30 md:h-50 h-50  object-cover"
               />
             </div>
           </div>
@@ -77,14 +77,14 @@ const HomeCards = () => {
               <img
                 src="/2.png"
                 alt=""
-                className="absolute md:-top-10 -top-8 right-2 w-30 md:h-50 h-45  "
+                className="absolute md:-top-10 -top-2 right-2 w-30 md:h-50 h-50  "
               />
             </div>
           </div>
         </div>
 
         {/* Card 3  */}
-        <div className="card-1 col-span-1 bg-white flex flex-col gap-4 relative py-4 px-4 min-h-[29vh] rounded-2xl shadow-2xl  ">
+        <div className="card-1 w-[95%] mx-auto   col-span-1 bg-white flex flex-col gap-4 relative py-4 px-4  min-h-[29vh] rounded-2xl shadow-2xl  ">
           <div className="heading">
             <p className="text-lg font-semibold">Transections</p>
             <p className="text-sm">Total 48.5% Growth 😎 this month</p>
@@ -129,7 +129,7 @@ const HomeCards = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-6 md:px-0 gap-4">
           {/* Card 4 */}
           <div className="card-1 col-span-1 bg-white flex flex-col  gap-4 relative py-4  rounded-2xl shadow-2xl ">
             <div className="text flex flex-col pl-4 ">
@@ -164,8 +164,8 @@ const HomeCards = () => {
         </div>
 
         {/* Card 6  */}
-        <div className="card-1  grid-cols-3  bg-white flex  items-center justify-center    relative rounded-2xl shadow-2xl ">
-          <div className="grid-cols-1 ">
+        <div className="card-1 grid grid-cols-1 md:grid-cols-3 px-4 md:px-0 w-[95%] mx-auto   bg-white     relative rounded-2xl shadow-2xl ">
+          <div className=" md:col-span-2    overflow-hidden ">
             {/* Chart  */}
             <div className="chart w-[100%]  my-4">
               <p className=" my-4 font-semibold text-center ">
@@ -176,12 +176,12 @@ const HomeCards = () => {
             </div>
           </div>
 
-          <div className="grid-cols-1 ">
+          <div className="md:grid-cols-1 flex md:items-center md:px-4 ">
             {/* Text  */}
             <div className="text-heading flex flex-col  py-4 justify-between  gap-2 w-[100%] ">
               {/* icons  */}
               <div className="icons flex gap-4  my-5">
-                <span className="bg-[#EDE4FF] p-1 rounded-xl text-3xl">
+                <span className="bg-[#EDE4FF] md:h-[12%] p-1 rounded-xl text-3xl">
                   <IoWalletOutline />
                 </span>
 
@@ -233,11 +233,11 @@ const HomeCards = () => {
 
 
         {/* Grid for Row 3  */}
-        <div className=" flex justify-evenly gap-3 py-4 overflow-hidden  max-w-[95%] ml-16 mx-auto px-2  ">
+        <div className=" flex flex-col items-center md:flex-row md:justify-evenly gap-3 py-4 overflow-hidden  max-w-[95%] md:ml-16 mx-auto px-2  ">
           {/* Activity  */}
 
           {/* Card 7  */}
-          <div className="  flex flex-col py-4 flex-1 bg-white items-center  ">
+          <div className="  flex flex-col w-[100%] py-4 flex-1 bg-white items-center shadow-2xl ">
             <div className="heading ">
               <p className="font-bold tracking-wide my-6 ">Activity Timeline</p>
 
@@ -332,9 +332,9 @@ const HomeCards = () => {
           </div>
 
              {/* demo..............  */}
-          <div className=" flex flex-col items-center overflow-hidden  gap-4 ">
+          <div className=" flex md:flex-col justify-around items-center overflow-hidden  gap-4 ">
             {/* Total Growth  */}
-            <div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[100%]">
+            <div className=" flex flex-col items-center py-2 bg-white shadow-2xl w-[100%] overflow-hidden">
               <p className="text-2xl font-bold">42.5k</p>
 
               <GrowthLine />
@@ -343,7 +343,7 @@ const HomeCards = () => {
             </div>
 
             {/* New project  */}
-            <div className=" w-[100%] flex flex-col gap-4 bg-white shadow-2xl px-10 py-4 ">
+            <div className=" md:w-[100%] flex flex-col gap-4 bg-white shadow-2xl px-10 py-4 ">
               <div className=" bg-[#8C57FF] w-10 text-white h-10 p-1 flex justify-center items-center rounded-full">
                 <RiFileWord2Fill className="text-2xl" />
               </div>
@@ -364,7 +364,7 @@ const HomeCards = () => {
      
 
       {/* Row 4 Started  */}
-      <div className="grid grid-cols-3 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  mt-8  mx-auto ">
+      <div className="grid md:grid-cols-3 px-4 md:px-0 gap-12 md:gap-4 w-[100%] md:w-[95%] md:ml-15  mt-8  mx-auto ">
         {/* Upgrade Plan  */}
         <div className="   flex flex-col gap-4  bg-white shadow-2xl px-4 py-4 ">
           <p className="font-semibold">Upgrade Plan</p>
@@ -550,7 +550,7 @@ const HomeCards = () => {
   <img src="./3.png" alt="" />
 </div>
 
-<div className=" h-[100%] flex flex-col justify-evenly">
+<div className=" h-[100%] flex flex-col gap-6 md:gap-0 mt-4 py-4 md:mt-0 md:py-0  justify-evenly">
   {/* Developer Meetup  */}
 <div className="flex items-center gap-3 mx-3">
   <p className="flex flex-col items-center justify-center bg-[#EDE4FF] rounded-xl px-4 py-1 text-[#9155FD] font-bold h-[80%]">24<span className="font-normal">Jan</span></p>
