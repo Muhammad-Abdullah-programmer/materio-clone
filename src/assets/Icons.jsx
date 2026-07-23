@@ -55,6 +55,8 @@ export { RiCheckDoubleFill } from "react-icons/ri";
 export { RxDotsHorizontal } from "react-icons/rx";
 export { HiOutlineClock } from "react-icons/hi2";
 export { SlLocationPin } from "react-icons/sl";
+export { IoMenuOutline } from "react-icons/io5";
+
 
 
 

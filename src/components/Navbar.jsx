@@ -15,6 +15,7 @@ import {
   FaRegStar,
   FaRegBell,
   FaUser,
+  IoMenuOutline,
   FaRegMoon,
   FaRegEnvelopeOpen,
   FaRegUser,
@@ -35,6 +36,8 @@ import {
   CgUserList,
   CiDark,
 } from "../assets/Icons.jsx";
+import { useState } from "react";
+import Sidebar from "./Sidebar.jsx";
 
 export default function Navbar({
   sun,
@@ -107,14 +110,24 @@ export default function Navbar({
     setUser(false);
   };
 
+  // Mobile Menue 
+  const [mobileMenue, setMobileMenue] = useState(false)
+
+  const openMobileMenue = ()=>{
+
+    setMobileMenue(!mobileMenue)
+  }
+
   return (
     <>
+
+    <Sidebar mobileMenue={mobileMenue} setMobileMenue={setMobileMenue}/>
       {/* Search Result Div  */}
       <div
         className={` ${searchbar ? "block" : "hidden"} search-result bg-white shadow-2xl px-4 z-50  w-[0%] flex flex-col gap-8  mx-auto absolute top-20 left-[20%]`}
       >
         {/* Search Bar  */}
-        <div className="search-bar flex justify-between items-center px-2 py-2 border text-2xl">
+        <div className="search-bar flex justify-between items-center px-2 py-2  border text-2xl">
           <CiSearch />
 
           <div className="text flex items-center gap-2 ">
@@ -215,7 +228,7 @@ export default function Navbar({
         </div>
       </div>
       <nav
-        className={`flex justify-between w-[100%] px-8 py-2 mx-auto ${dark ? "bg-[#28243D] text-[#D4D1E9]" : " text-black"}`}
+        className={`flex  md:justify-between md:items-center w-[100%] md:px-8 py-2 mx-auto ${dark ? "bg-[#28243D] text-[#D4D1E9]" : " text-black"} `}
       >
         {/* left div  */}
 
@@ -223,9 +236,15 @@ export default function Navbar({
           {/* Logo  */}
           {/* <div className="logo"><h1 className='text-[#af89fe] text-4xl font-extrabold'>M Abdullah</h1></div> */}
 
+
+{/* Hemburger Menue  */}
+<div className="md:hidden flex items-center ml-2 text-2xl">
+<IoMenuOutline onClick={openMobileMenue}/>
+</div>
+
           {/* Search Bar  */}
           <div
-            className="search-bar flex items-center gap-3 text-2xl font-semibold"
+            className="search-bar flex items-center gap-3 text-2xl md:ml-4 font-semibold"
             onClick={handleSearch}
           >
             <CiSearch className="font-extrabold" />
@@ -241,7 +260,7 @@ export default function Navbar({
                 <IoLanguage />
               </li>
               <ul
-                className={`${open ? "block" : "hidden"} ${dark ? "bg-[#28243D] text-white" : "bg-white"} absolute top-8  shadow-md w-50 flex flex-col`}
+                className={`${open ? "block" : "hidden"} ${dark ? "bg-[#28243D] text-white" : "bg-white"} absolute top-13 -left-3 md:top-12 z-50  shadow-2xl w-50 flex flex-col`}
               >
                 <li
                   className={`${dark ? "hover:bg-[#37334C] text-[#D5D1EA]" : "hover:bg-[#ECECF2]"} bg-[#ede4ff] text-blue-500 pl-4 py-2 w-[100%]`}
@@ -249,9 +268,9 @@ export default function Navbar({
                   English
                 </li>
                 <li
-                  className={`${dark ? "hover:bg-black text-[#D5D1EA]" : "hover:bg-[#ECECF2]"} bg-[#ede4ff] text-blue-500 pl-4 py-2 w-[100%]`}
+                  className={`${dark ? "hover:bg-black text-[#D5D1EA]" : "hover:bg-[#ECECF2]"} bg-white text-blue-500 pl-4 py-2 w-[100%]`}
                 >
-                  English
+                  French
                 </li>
                 <li className="pl-4 py-2 hover:bg-[#f1f2f7] cursor-pointer">
                   Arabic
@@ -265,16 +284,16 @@ export default function Navbar({
               </li>
 
               <ul
-                className={`${sun ? "block" : "hidden"} ${dark ? "bg-gray-900 text-white" : "bg-white"} absolute top-8 left-0  shadow-md w-32 z-50 rounded`}
+                className={`${sun ? "block" : "hidden"} ${dark ? "bg-gray-900 text-white" : "bg-white"} absolute top-10 md:top-10 -right-30 md:-right-35  shadow-2xl w-50 z-50 rounded py-1 `}
               >
                 <li
-                  className={` ${dark ? "hover:bg-gray-600 text-white" : "hover:bg-white text-black"}  flex items-center gap-2 px-3 py-2 cursor-pointer `}
+                  className={` ${dark ? "hover:bg-gray-600 text-white" : "hover:bg-[#F4F5FA] text-black"}  flex items-center gap-2 px-3 py-2 cursor-pointer  `}
                   onClick={handledark}
                 >
                   <FaRegLightbulb /> Light
                 </li>
                 <li
-                  className={` ${dark ? "hover:bg-gray-600 text-white" : "hover:bg-white text-black"}  flex items-center gap-2 px-3 py-2 cursor-pointer `}
+                  className={` ${dark ? "hover:bg-gray-600 text-white" : "hover:bg-[#F4F5FA] text-black"}  flex items-center gap-2 px-3 py-2 cursor-pointer `}
                   onClick={handleTheme}
                 >
                   <CiDark /> Dark
@@ -289,7 +308,7 @@ export default function Navbar({
               </li>
 
               <div
-                className={`${star ? "block" : "hidden"} ${dark ? " bg-[#312D4B]" : " bg-[#ffffff] text-black"}  absolute right-8 top-15 px-4`}
+                className={`${star ? "block" : "hidden"} ${dark ? " bg-[#312D4B]" : " bg-[#ffffff] text-black"} z-50 shadow-2xl absolute right-2 md:right-8 top-15 px-4`}
               >
                 <div className={` text flex justify-between my-4`}>
                   <h5
@@ -305,7 +324,7 @@ export default function Navbar({
                   {/* First Child  */}
                   <div className="first-child flex">
                     {/* Clander  */}
-                    <div className="clander flex flex-col items-center justify-center w-1/2 min-w-40  border  hover:bg-[#f1f2f7]">
+                    <div className="clander flex flex-col items-center justify-center w-1/2 min-w-40  border-t-1 border-r-1  hover:bg-[#f1f2f7]">
                       <CiCalendarDate className="bg-[#efeff1] rounded-full p-2 text-5xl text-black" />
 
                       <div className="c-text flex flex-col items-center">
@@ -323,7 +342,7 @@ export default function Navbar({
                     </div>
 
                     {/* Invoice App  */}
-                    <div className="invoice-app w-1/2 border min-w-50 py-10 flex flex-col items-center justify-center  hover:bg-[#f1f2f7]">
+                    <div className="invoice-app w-1/2 border-t-1  min-w-50 py-10 flex flex-col items-center justify-center  hover:bg-[#f1f2f7]">
                       <IoNewspaperOutline className="bg-[#efeff1] rounded-full p-2 text-5xl text-black" />
 
                       <div className="text flex flex-col items-center">
@@ -345,7 +364,7 @@ export default function Navbar({
 
                   <div className="second-child flex ">
                     {/* Clander  */}
-                    <div className="clander flex flex-col items-center justify-center w-1/2 min-w-40  border  hover:bg-[#f1f2f7]">
+                    <div className="clander flex flex-col items-center justify-center w-1/2 min-w-40  border-t-1 border-r-1  hover:bg-[#f1f2f7]">
                       <CiUser className="bg-[#efeff1] rounded-full p-2 text-5xl text-black" />
 
                       <div className="c-text flex flex-col items-center">
@@ -364,7 +383,7 @@ export default function Navbar({
 
                     {/* Invoice App  */}
                     <div
-                      className={`invoice-app w-1/2 border min-w-50 py-10 flex flex-col items-center justify-center ${dark ? "hover:bg-[#280ed2]" : "hover:bg-[#f1f2f7]"}`}
+                      className={`invoice-app w-1/2 border-t-1  min-w-50 py-10 flex flex-col items-center justify-center ${dark ? "hover:bg-[#280ed2]" : "hover:bg-[#f1f2f7]"}`}
                     >
                       <SlScreenDesktop className="bg-[#efeff1] rounded-full p-2 text-5xl text-black" />
 
@@ -386,9 +405,8 @@ export default function Navbar({
                   {/* Third Child  */}
                   <div className="second-child flex ">
                     {/* Clander  */}
-                    <div
-                      className={`invoice-app w-1/2 border min-w-50 py-10 flex flex-col items-center justify-center ${dark ? "hover:bg-[#383452]" : "hover:bg-[#f1f2f7]"}`}
-                    >
+                                       <div className="clander flex flex-col items-center justify-center w-1/2 min-w-40  border-t-1 border-r-1  hover:bg-[#f1f2f7]">
+
                       <BiSolidDashboard className="bg-[#efeff0] rounded-full p-2 text-5xl text-black" />
 
                       <div className="c-text flex flex-col items-center">
@@ -407,7 +425,7 @@ export default function Navbar({
 
                     {/* Invoice App  */}
                     <div
-                      className={`invoice-app w-1/2 border min-w-50 py-10 flex flex-col items-center justify-center ${dark ? "hover:bg-[#383452]" : "hover:bg-[#f1f2f7]"}`}
+                      className={`invoice-app w-1/2 border-t-1  min-w-50 py-10 flex flex-col items-center justify-center ${dark ? "hover:bg-[#383452]" : "hover:bg-[#f1f2f7]"}`}
                     >
                       <IoSettingsSharp className="bg-[#efeff1] rounded-full p-2 text-5xl text-black" />
 
@@ -437,10 +455,10 @@ export default function Navbar({
               </li>
 
               <div
-                className={`${bell ? "block" : "hidden"}  absolute right-10 top-15 w-[30%] bg-[#ffff]`}
+                className={`${bell ? "block" : "hidden"} z-50 shadow-2xl absolute right-5 md:right-10 top-15 md:min-w-[30%] bg-[#ffff]`}
               >
                 {/* Notifactions  */}
-                <div className="notifactions flex justify-between bg-[#ffff]  hover:bg-[#f1f2f7] border py-5">
+                <div className="notifactions flex justify-between bg-[#ffff]  hover:bg-[#f1f2f7]  py-2">
                   <div className="title px-4">
                     <p className="text-[#2E263D] text-lg font-semibold">
                       Notifactions
@@ -456,13 +474,14 @@ export default function Navbar({
                 </div>
 
                 {/* User 1  */}
-                <div className="u-1 flex justify-around items-center py-3 border bg-[#ffff] hover:bg-[#f1f2f7]">
+                <div className="u-1 flex pl-4 gap-2 items-center py-3 border-t-1 bg-[#ffff] hover:bg-[#f1f2f7]">
                   <div className="icon">
-                    <FaUser className="text-3xl" />
+                    {/* <FaUser  /> */}
+                    <img src="/bellicon-1.png" alt="" className="text-3xl rounded-full object-cover w-15 h-15"  />
                   </div>
                   <div className="text">
                     <div className="heading">
-                      <h5>Congratulations Flora 🎉</h5>
+                      <h5 className="text-sm font-semibold">Congratulations Flora 🎉</h5>
                       <p className="text-xs my-2">
                         Won the monthly bestseller gold badge
                       </p>
@@ -472,13 +491,15 @@ export default function Navbar({
                 </div>
 
                 {/* u 2  */}
-                <div className="u-1 flex justify-between px-6 items-center py-3 border  bg-[#ffff] hover:bg-[#f1f2f7]">
-                  <div className="icon">
-                    <FaUser className="text-3xl" />
+                <div className="u-1 flex  pl-4 gap-2  px-6 items-center py-3 border-t-1  bg-[#ffff] hover:bg-[#f1f2f7]">
+                  <div className="icon h-[35%] w-[20%]">
+                   <span className="rounded-full bg-[#F0EFF0] text-2xl px-1 py-3 flex justify-center items-center ">
+                    CB
+                   </span>
                   </div>
-                  <div className="text mr-29">
+                  <div className="text ">
                     <div className="heading">
-                      <h5>Cecilia Becker</h5>
+                      <h5 className="text-sm font-semibold">Cecilia Becker</h5>
                       <p className="text-xs my-2">Accepted your connection</p>
                       <p className="text-xs">12 h ago</p>
                     </div>
@@ -486,19 +507,23 @@ export default function Navbar({
                 </div>
 
                 {/* u 3  */}
-                <div className="u-1 flex justify-around items-center py-3 border  bg-[#ffff] hover:bg-[#f1f2f7]">
+                <div className="u-1 flex  pl-4 gap-2  px-6 items-center py-3 border-t-1  bg-[#ffff] hover:bg-[#f1f2f7]">
                   <div className="icon">
-                    <FaUser className="text-3xl" />
+                    <img src="/bellicon-2.png" alt="" className="text-3xl rounded-full object-cover w-15 h-15"  />
                   </div>
                   <div className="text mr-8">
                     <div className="heading">
-                      <h5>Bernard Woods</h5>
+                      <h5 className="text-sm font-semibold">Bernard Woods</h5>
                       <p className="text-xs my-2">
                         You have new message from Bernard Woods
                       </p>
                       <p className="text-xs">May 18, 8:25 AM</p>
                     </div>
                   </div>
+                </div>
+
+                <div className="flex justify-center my-4 md:hidden">
+                  <button className="bg-[#7E4EE5] rounded-xl font-semibold  p-2 text-white w-[90%]">View All Notifaction</button>
                 </div>
               </div>
             </ul>
@@ -510,7 +535,7 @@ export default function Navbar({
               </li>
 
               <div
-                className={`${user ? "block" : "hidden"}  absolute right-10 top-15 w-[30%] bg-[#ffff]`}
+                className={`${user ? "block" : "hidden"} z-50 absolute right-5  md:right-10 top-15 md:min-w-[30%] min-w-[50%] shadow-2xl px-2 bg-[#ffff]`}
               >
                 {/* Notifactions  */}
                 <div className="notifactions flex py-4  bg-[#ffff]  hover:bg-[#f1f2f7] border-b  ">
@@ -575,7 +600,7 @@ export default function Navbar({
                   </div>
                 </div>
 
-                <div className="btn w-[100%] flex gap-6 text-sm justify-center items-center px-4">
+                <div className="btn w-[100%] flex gap-6 text-sm justify-center items-center px-4 my-4">
                   <button className="flex justify-center py-2 items-center gap-2 text-white font-bold bg-[#FF4C51] w-[100%]">
                     Logout{" "}
                     <IoIosLogOut className="font-bold text-white text-xl" />{" "}
